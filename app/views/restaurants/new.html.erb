@@ -1,0 +1,14 @@
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name  %>
+  <%= f.label :address %>
+  <%= f.text_field :address  %>
+  <%= f.label :category %>
+  <%= f.select :category, options_for_select(["chinese", "italian", "japanese", "french", "belgian"],:disabled => ["Select One"]), :class => 'genForm_dropBox' %>
+  <%= f.label :phone_number %>
+  <%= f.text_field :phone_number  %>
+  <%= f.submit "Add!", class: 'btn btn-primary' %>
+<% end %>
+
+<%= link_to "Go back", restaurants_path %>
+

@@ -1,0 +1,14 @@
+<div class="banner d-flex justify-content-between align-items-center p-3 bg-info">
+  <h1 class= "text-white">Restaurants</h1> <%= link_to "Create new restaurant", new_restaurant_path, class:'text-white' %>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <ul>
+        <% @restaurants.each do |restaurant| %>
+        <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

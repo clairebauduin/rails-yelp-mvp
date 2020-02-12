@@ -1,0 +1,14 @@
+<div class="container">
+      <%= simple_form_for [@restaurant, @review] do |f| %>
+        <%= f.label :content %>
+        <%= f.text_field :content  %>
+        <%= f.label :rating %>
+        <%= f.select :rating, options_for_select([0, 1, 2, 3, 4, 5],:disabled => ["Select One"]), :class => 'genForm_dropBox' %>
+        <%= f.submit "Add!", class: 'btn btn-primary' %>
+      <% end %>
+
+      <%= link_to "Go back", restaurant_path(@restaurant) %>
+</div>
+
+
+
